@@ -1,0 +1,83 @@
+.container {
+  max-width: 1150px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 30px;
+}
+
+body {
+  // min-width: 320px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px !important;
+  line-height: 176.9% !important;
+  color: #b2abc1;
+  overflow-x: hidden;
+  // min-height: 100vh;
+  min-height: 4600px;
+  background: linear-gradient(
+    183.58deg,
+    #000104 -3.15%,
+    #030526 26.1%,
+    #030526 39.33%,
+    #02031a 60.64%,
+    #030526 74.95%,
+    #04031c 101.43%
+  );
+}
+
+.title {
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 123.9%;
+  color: #ffffff;
+}
+
+.s-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 123.9%;
+  color: #ffffff;
+}
+
+.g-button {
+  border-radius: 12px;
+  padding: 15px 23px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 124.4%;
+  color: #ffffff;
+  background: rgba(116, 116, 128, 0.15);
+
+  img {
+    display: inline-block;
+    margin-left: 14px;
+  }
+}
+.b-button {
+  background: radial-gradient(95.59% 335.85% at 72.88% -14.71%, #0039cb 0%, #0066ff 100%);
+  border-radius: 12px;
+  padding: 15px 26px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 124.4%;
+  color: #ffffff;
+
+  img {
+    display: inline-block;
+    margin-left: 14px;
+  }
+}
