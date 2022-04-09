@@ -26,8 +26,7 @@ body {
   line-height: 176.9% !important;
   color: #b2abc1;
   overflow-x: hidden;
-  // min-height: 100vh;
-  min-height: 4600px;
+  min-height: 100vh;
   background: linear-gradient(
     183.58deg,
     #000104 -3.15%,
@@ -79,5 +78,100 @@ body {
   img {
     display: inline-block;
     margin-left: 14px;
+  }
+}
+
+.tag + .tag {
+  margin-left: 16px;
+}
+.tag {
+  padding: 11px 19px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 123.9%;
+  color: #ffffff;
+  display: inline-block;
+  span {
+    position: relative;
+    z-index: 10;
+  }
+  border: 2px solid transparent;
+  position: relative;
+  &::before {
+    content: '';
+    z-index: 0;
+    border-radius: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &.purple {
+    background: radial-gradient(
+      121.97% 1460.12% at 0% 0%,
+      #8233ff 51.56%,
+      #ffffff 62.5%,
+      #952dff 74.48%,
+      #ad6bff 97.92%
+    );
+    &::before {
+      background: radial-gradient(110.69% 193.83% at 21.2% 18%, #8134ff 0%, #8d30ff 100%);
+    }
+  }
+  &.green {
+    background: radial-gradient(
+      121.97% 1460.12% at 0% 0%,
+      #34ffab 16.67%,
+      #ffffff 27.6%,
+      #32ff8d 43.75%,
+      #31ff6c 97.92%
+    );
+    &::before {
+      background: radial-gradient(110.69% 193.83% at 21.2% 18%, #34ffb6 0%, #30ff6a 100%);
+    }
+  }
+  &.red {
+    background: radial-gradient(
+      121.97% 1460.12% at 0% 0%,
+      #ff2e79 51.56%,
+      #ffffff 62.5%,
+      #ff2971 74.48%,
+      #ff1d61 97.92%
+    );
+    &::before {
+      background: radial-gradient(110.69% 193.83% at 21.2% 18%, #ff2f7a 0%, #ff1d61 100%);
+    }
+  }
+  &.yellow {
+    background: radial-gradient(
+      121.97% 1460.12% at 0% 0%,
+      #ffe534 51.56%,
+      #ffffff 62.5%,
+      #ffc232 74.48%,
+      #ffad31 97.92%
+    );
+    &::before {
+      background: radial-gradient(110.69% 193.83% at 21.2% 18%, #ffd12f 0%, #ffa41d 100%);
+    }
+  }
+  &.blue {
+    background: radial-gradient(
+      121.97% 1460.12% at 0% 0%,
+      #2f6dff 51.56%,
+      #ffffff 62.5%,
+      #2e69ff 74.48%,
+      #2136ff 97.92%
+    );
+    &::before {
+      background: radial-gradient(123.53% 123.53% at 50% 5.25%, #3485ff 0%, #1400ff 100%);
+    }
+  }
+
+  img {
+    display: inline-block;
+    margin-right: 11px;
   }
 }

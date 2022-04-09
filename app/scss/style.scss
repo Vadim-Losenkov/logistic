@@ -5,6 +5,8 @@
 @import 'libs';
 
 .header {
+  position: relative;
+  z-index: 50;
   &__top {
     padding: 26px 0;
     border-bottom: 1px solid #0c0d23;
@@ -113,15 +115,22 @@
   }
   &__image {
     position: absolute;
-    top: 0;
+    top: -150px;
     right: 0;
     z-index: 0;
+    transform: translateX(100px);
   }
 }
 
 .catalog {
   &__title {
     margin-bottom: 82px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    flex-wrap: wrap;
   }
   &__item {
     max-width: 540px;
@@ -133,6 +142,8 @@
     );
     backdrop-filter: blur(131px);
     border-radius: 24px;
+    margin: 0 15px;
+    margin-bottom: 55px;
   }
   &__item-box {
     padding: 52px;
@@ -140,8 +151,87 @@
   &__item-image img {
     border-radius: 25px 25px 0 0;
   }
+  &__item-title {
+    margin-bottom: 15px;
+  }
   &__item-text {
     margin-bottom: 27px;
+  }
+  &__item-tags {
+    margin-bottom: 40px;
+  }
+}
+
+.delivery {
+  position: relative;
+  padding-top: 95px;
+  padding-bottom: 220px;
+  &__title {
+    margin-bottom: 23px;
+  }
+  &__text {
+    margin-bottom: 56px;
+  }
+  &__box {
+    max-width: 484px;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+  }
+  &__item {
+    margin-bottom: 30px;
+    width: 100%;
+    background: linear-gradient(
+      89.08deg,
+      rgba(74, 78, 132, 0.14) -11.82%,
+      rgba(8, 7, 42, 0.24) 107.57%
+    );
+    backdrop-filter: blur(131px);
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgba(#312b54, 0.2);
+  }
+  &__item-box {
+    display: flex;
+    align-items: center;
+  }
+  &__item-title {
+    font-size: 25px;
+    line-height: 123.9%;
+  }
+  &__item-country {
+    width: 46px;
+    height: 30px;
+    margin-right: 34px;
+  }
+  &__image {
+    position: absolute;
+    right: -160px;
+    top: -270px;
+    z-index: 0;
+  }
+}
+
+.calc {
+  margin-bottom: 152px;
+}
+
+.footer {
+  padding-bottom: 78px;
+  &__box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  &__text {
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 123.9%;
+    color: #4c4e6a;
   }
 }
 
