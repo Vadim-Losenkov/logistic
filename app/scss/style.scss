@@ -217,6 +217,36 @@
 
 .calc {
   margin-bottom: 152px;
+
+  &__item-select__input {
+    width: 285px;
+    height: 70px;
+    background: #0c0d29;
+    backdrop-filter: blur(131px);
+    border-radius: 11px;
+    border: none;
+    padding-left: 26px;
+    padding-right: 60px;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 123.9%;
+    color: #ffffff;
+
+    &::after {
+      border: none;
+      background-image: url('../images/icons/arrow-down-select.svg');
+      width: 15px;
+      height: 9px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: translate(0);
+      right: 25px;
+    }
+  }
 }
 
 .footer {
