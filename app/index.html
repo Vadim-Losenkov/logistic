@@ -8,7 +8,11 @@
     <title>GeoExpress</title>
     <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/style.min.css" type="text/css" media="all" />
-
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="email=no" />
+    <link rel="shortcut icon" href="images/icons/favicon.png" type="image/x-icon" />
     <!-- <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>
       eruda.init();
@@ -47,6 +51,60 @@
         </div>
       </div>
     </header>
+    <div class="header-mobile">
+      <div class="container">
+        <div class="header-mobile__inner">
+          <a href="#" class="logo">
+            <img src="images/global/logo.png" alt="" />
+          </a>
+          <div class="header-mobile__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="header-mobile__wrapper">
+        <div class="header-mobile__menu">
+          <a href="#home" data-button="toSecton" data-type="home" class="header-mobile__link">
+            Главная
+          </a>
+          <a
+            href="#reviews"
+            data-type="reviews"
+            data-button="toSecton"
+            class="header-mobile__link active"
+          >
+            Каталог товаров
+          </a>
+          <a href="#roadmap" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
+            Виды достовок
+          </a>
+          <a href="#roadmap" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
+            Калькулятор
+          </a>
+          <a href="#roadmap" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
+            Сотрудничество
+          </a>
+        </div>
+        <div class="header-mobile__user">
+          <a href="#popup-signIn" data-effect="mfp-zoom-in" class="header-mobile__login open-popup">
+            Вход
+          </a>
+          <a
+            href="#popup-signUp"
+            data-effect="mfp-zoom-in"
+            class="header__top-signUp open-popup b-button"
+          >
+            Регистрация
+          </a>
+        </div>
+        <div class="header-mobile__city">
+          <div class="header-mobile__city-title">Город:</div>
+          <div class="header-mobile__city-name">Уфа</div>
+        </div>
+      </div>
+    </div>
     <main class="main">
       <section class="top">
         <div class="container">
@@ -72,9 +130,12 @@
           </div>
         </div>
       </section>
-      <section class="catalog">
+
+    <!-- цвет тега задается классом  -->
+    <!-- purple | yellow | red | green | blue -->
+    <section class="catalog">
         <div class="container">
-          <div class="catalog__innee">
+          <div class="catalog__inner">
             <h2 class="catalog__title title">Каталог товаров</h2>
             <div class="catalog__box">
               <div class="catalog__item">
@@ -83,8 +144,7 @@
                 </div>
                 <div class="catalog__item-box">
                   <div class="catalog__item-tags">
-                    <!-- цвет тега задается классом  -->
-                    <!-- purple | yellow | red | green | blue -->
+                    
                     <a href="#" class="catalog__item-tag purple tag">
                       <span>
                         <img src="images/icons/apple.svg" alt="" />
@@ -109,8 +169,6 @@
                 </div>
                 <div class="catalog__item-box">
                   <div class="catalog__item-tags">
-                    <!-- цвет тега задается классом  -->
-                    <!-- purple | yellow | red | green | blue -->
                     <a href="#" class="catalog__item-tag yellow tag">
                       <span>
                         <img src="images/icons/nike.png" alt="" />
@@ -134,12 +192,62 @@
               </div>
               <div class="catalog__item">
                 <div class="catalog__item-image">
+                  <img src="images/content/item-1.jpg" alt="" />
+                </div>
+                <div class="catalog__item-box">
+                  <div class="catalog__item-tags">
+                    
+                    <a href="#" class="catalog__item-tag purple tag">
+                      <span>
+                        <img src="images/icons/apple.svg" alt="" />
+                        Apple
+                      </span>
+                    </a>
+                    <a href="#" class="catalog__item-tag blue tag">
+                      <span>Видеокарты</span>
+                    </a>
+                  </div>
+                  <h4 class="catalog__item-title s-title">Техника</h4>
+                  <p class="catalog__item-text">
+                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
+                    сердце от бега.
+                  </p>
+                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__item-image">
+                  <img src="images/content/item-2.png" alt="" />
+                </div>
+                <div class="catalog__item-box">
+                  <div class="catalog__item-tags">
+                    <a href="#" class="catalog__item-tag yellow tag">
+                      <span>
+                        <img src="images/icons/nike.png" alt="" />
+                        Nike
+                      </span>
+                    </a>
+                    <a href="#" class="catalog__item-tag red tag">
+                      <span>
+                        <img src="images/icons/adidas.svg" alt="" />
+                        Adidas
+                      </span>
+                    </a>
+                  </div>
+                  <h4 class="catalog__item-title s-title">Одежда</h4>
+                  <p class="catalog__item-text">
+                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
+                    сердце от бега.
+                  </p>
+                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
+                </div>
+              </div>
+              <!-- <div class="catalog__item">
+                <div class="catalog__item-image">
                   <img src="images/content/item-3.png" alt="" />
                 </div>
                 <div class="catalog__item-box">
                   <div class="catalog__item-tags" style="margin-top: -65px">
-                    <!-- цвет тега задается классом  -->
-                    <!-- purple | yellow | red | green | blue -->
                     <a href="#" class="catalog__item-tag green tag">
                       <span>
                         <img src="images/icons/mac.png" style="margin: 0" alt="" />
@@ -165,8 +273,6 @@
                 </div>
                 <div class="catalog__item-box">
                   <div class="catalog__item-tags" style="margin-top: -85px">
-                    <!-- цвет тега задается классом  -->
-                    <!-- purple | yellow | red | green | blue -->
                     <a
                       href="#"
                       class="catalog__item-tag blue tag"
@@ -193,7 +299,7 @@
                   </p>
                   <a href="#" class="catalog__item-link g-button">Подробнее</a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -246,7 +352,7 @@
           </div>
         </div>
       </div>
-      <div class="calc">
+      <!-- <div class="calc">
         <div class="container">
           <div class="calc__inner">
             <div class="calc__image">
@@ -312,7 +418,7 @@
                 </div>
                 <div class="calc__item">
                   <div class="calc__item-box">
-                    <h5 class="calc__item-title">Страна отправителя</h5>
+                    <h5 class="calc__item-title">Страна получателя</h5>
                     <div class="calc__item-select" data-select="wrapper">
                       <div class="calc__item-select__input" data-select="input">
                         <div class="calc__item-select__item active" data-select="item">
@@ -337,28 +443,44 @@
                     </div>
                   </div>
                   <div class="calc__item-box">
-                    <h5 class="calc__item-title">Город отправителя</h5>
+                    <h5 class="calc__item-title">Город получателя</h5>
                     <div class="calc__item-select" data-select="wrapper">
                       <div class="calc__item-select__input" data-select="input">
                         <div class="calc__item-select__item active" data-select="item">
-                          <span>Тбилиси</span>
+                          <span>Уфа</span>
                         </div>
                       </div>
                       <div class="calc__item-select__list">
                         <div class="calc__item-select__item disabled" data-select="item">
-                          <span>Тбилиси</span>
+                          <span>Москва</span>
                         </div>
                         <div class="calc__item-select__item disabled" data-select="item">
-                          <span>Тбилиси</span>
+                          <span>Казань</span>
+                        </div>
+                        <div class="calc__item-select__item disabled" data-select="item">
+                          <span>Уфа</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="calc__item-box">
-                    <h5 class="calc__item-title">Вес</h5>
-                    <div class="calc__item-input">
+                    <h5 class="calc__item-title">Размер</h5>
+                    <div class="calc__item-select" data-select="wrapper">
                       <div class="calc__item-select__input" data-select="input">
-                        <input type="text" placeholder="Вес" />
+                        <div class="calc__item-select__item active" data-select="item">
+                          <span>Маленький</span>
+                        </div>
+                      </div>
+                      <div class="calc__item-select__list">
+                        <div class="calc__item-select__item disabled" data-select="item">
+                          <span>Маленький</span>
+                        </div>
+                        <div class="calc__item-select__item disabled" data-select="item">
+                          <span>Средний</span>
+                        </div>
+                        <div class="calc__item-select__item disabled" data-select="item">
+                          <span>Большой</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -368,8 +490,8 @@
           </div>
         </div>
       </div>
-    </main>
-    <footer class="footer">
+    </main> -->
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__box">
@@ -380,7 +502,7 @@
           <p class="footer__text">Пользовательское соглашение</p>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/custom-select.min.js"></script>

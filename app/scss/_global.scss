@@ -81,9 +81,6 @@ body {
   }
 }
 
-.tag + .tag {
-  margin-left: 16px;
-}
 .tag {
   padding: 11px 19px;
   border-radius: 24px;
@@ -91,10 +88,16 @@ body {
   font-size: 22px;
   line-height: 123.9%;
   color: #ffffff;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   span {
     position: relative;
     z-index: 10;
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   border: 2px solid transparent;
   position: relative;

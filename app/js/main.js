@@ -1,5 +1,9 @@
 $(function () {
   // $('.calc__item-select').niceSelect();
+  $('.header-mobile__burger').on('click', function () {
+    $(this).toggleClass('open');
+    $('.header-mobile__wrapper').toggleClass('open');
+  });
   $('.calc__item-select__item.disabled, [data-select="input"]').on('click', function () {
     $(this).parent('[data-select="wrapper"]').children('.calc__item-select__list').slideToggle(400);
   });
