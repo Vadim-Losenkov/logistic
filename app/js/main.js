@@ -1,5 +1,8 @@
 $(function () {
   // $('.calc__item-select').niceSelect();
+  $('.calc__item-select__item.disabled, [data-select="input"]').on('click', function () {
+    $(this).parent('[data-select="wrapper"]').children('.calc__item-select__list').slideToggle(400);
+  });
 });
 
 class Select {
@@ -53,4 +56,4 @@ class Select {
   }
 }
 
-new Select('.calc__item-select', {});
+// new Select('.calc__item-select', {});

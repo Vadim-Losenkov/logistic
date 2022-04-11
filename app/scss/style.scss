@@ -217,8 +217,36 @@
 
 .calc {
   margin-bottom: 152px;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    height: 750px;
+    left: -115px;
+    top: -152px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__info-title {
+    margin-bottom: 23px;
+  }
+  &__info-text {
+    margin-bottom: 67px;
+  }
+
+  &__item-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 123.9%;
+    color: #ffffff;
+    margin-bottom: 27px;
+  }
 
   &__item-select__input {
+    cursor: pointer;
     width: 285px;
     height: 70px;
     background: #0c0d29;
@@ -235,8 +263,10 @@
     font-size: 20px;
     line-height: 123.9%;
     color: #ffffff;
+    margin-bottom: 6px;
 
     &::after {
+      content: '';
       border: none;
       background-image: url('../images/icons/arrow-down-select.svg');
       width: 15px;
@@ -245,7 +275,85 @@
       background-repeat: no-repeat;
       transform: translate(0);
       right: 25px;
+      position: absolute;
     }
+  }
+  &__item-select__item {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      color: #fff;
+    }
+    &.active {
+      padding: 30px 0;
+    }
+    img {
+      margin-right: 25px;
+      width: 38px;
+      height: 26px;
+    }
+  }
+  &__item-select__item + .calc__item-select__item {
+    border-top: 1px solid #312b549e;
+  }
+  &__item-select__list {
+    background: #0a0c29;
+    backdrop-filter: blur(131px);
+    border-radius: 11px;
+    width: 285px;
+    position: absolute;
+    display: none;
+    z-index: 10;
+  }
+
+  &__item-box {
+    margin-bottom: 30px;
+  }
+  &__item-input {
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+      color: #fff;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 123.9%;
+        color: #38395f;
+      }
+    }
+
+    .calc__item-select__input::after {
+      content: 'кг';
+      background: transparent;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 123.9%;
+      color: #ffffff;
+      top: 39%;
+      transform: translateY(-50%);
+    }
+  }
+  &__info-con {
+    display: flex;
+    margin: 0 -15px;
+    position: relative;
+    max-width: 587px;
+
+    .change-calc {
+      cursor: pointer;
+      position: absolute;
+      top: 43px;
+      left: calc(54% - 3px);
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+  }
+  &__item {
+    margin: 0 15px;
   }
 }
 
