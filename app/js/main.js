@@ -9,6 +9,18 @@ $(function () {
   });
 });
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log(entry);
+    }
+  })
+}, {
+  threshold: 0.7
+})
+
+document.querySelectorAll('.section').forEach($s => observer.observe($s))
+
 class Select {
   constructor(wrapper, settings = {}) {
     this.$wrapper = document.querySelectorAll(wrapper || '[data-select="wrapper"]');
