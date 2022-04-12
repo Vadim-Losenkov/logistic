@@ -106,18 +106,7 @@
     &__wrapper {
       display: block;
 
-      background: linear-gradient(
-        0.65deg,
-        rgba(12, 14, 40, 0.54) -3.61%,
-        rgba(12, 14, 40, 0.86) 45.21%,
-        rgba(12, 14, 40, 0) 106.83%
-      );
-      backdrop-filter: blur(131px);
-
-      // background: rgba(5, 4, 31, 0.9);
-      // backdrop-filter: blur(40px);
-      // box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.09);
-      /* Note: backdrop-filter has minimal browser support */
+      background: #fff;
       border-radius: 18px;
       width: 277px;
 
@@ -148,7 +137,7 @@
       justify-content: center;
       align-items: center;
       font-size: 16px;
-      color: #eee;
+      color: #292929;
       line-height: 27px;
       font-weight: 400;
       transition: all 0.3s;
@@ -195,7 +184,7 @@
       font-weight: 600;
       font-size: 18px;
       line-height: 21px;
-      color: #eee;
+      color: #292929;
 
       padding-left: 20px;
       position: relative;
