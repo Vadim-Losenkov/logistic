@@ -42,11 +42,11 @@
       <div class="container">
         <div class="header__inner">
           <nav class="header__nav">
-            <a href="#" class="header__nav-link">Главная</a>
-            <a href="#" class="header__nav-link">Каталог товаров</a>
-            <a href="#" class="header__nav-link">Виды достовок</a>
-            <a href="#" class="header__nav-link">Калькулятор</a>
-            <a href="#" class="header__nav-link">Сотрудничество</a>
+            <a href="#home" data-button="toSecton" class="header__nav-link">Главная</a>
+            <a href="#catalog" data-button="toSecton" class="header__nav-link">Каталог товаров</a>
+            <a href="#delivery" data-button="toSecton" class="header__nav-link">Виды достовок</a>
+            <a href="#calc" data-button="toSecton" class="header__nav-link">Калькулятор</a>
+            <a href="#footer" data-button="toSecton" class="header__nav-link">Сотрудничество</a>
           </nav>
         </div>
       </div>
@@ -69,21 +69,21 @@
           <a href="#home" data-button="toSecton" data-type="home" class="header-mobile__link">
             Главная
           </a>
-          <a
-            href="#reviews"
-            data-type="reviews"
-            data-button="toSecton"
-            class="header-mobile__link active"
-          >
+          <a href="#catalog" data-type="reviews" data-button="toSecton" class="header-mobile__link">
             Каталог товаров
           </a>
-          <a href="#roadmap" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
+          <a
+            href="#delivery"
+            data-type="roadmap"
+            data-button="toSecton"
+            class="header-mobile__link"
+          >
             Виды достовок
           </a>
-          <a href="#roadmap" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
+          <a href="#calc" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
             Калькулятор
           </a>
-          <a href="#roadmap" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
+          <a href="#footer" data-type="roadmap" data-button="toSecton" class="header-mobile__link">
             Сотрудничество
           </a>
         </div>
@@ -106,7 +106,7 @@
       </div>
     </div>
     <main class="main">
-      <section class="top section">
+      <section class="top section" id="home">
         <div class="container">
           <div class="top__inner">
             <div class="top__info">
@@ -120,7 +120,7 @@
                 /></a>
                 <a href="#" class="top__info-link g-button">Подробнее</a>
               </div>
-              <a href="#" class="top__arrow">
+              <a href="#catalog" data-button="toSecton" class="top__arrow">
                 <img src="images/icons/arrow-down.svg" alt="" />
               </a>
             </div>
@@ -133,7 +133,7 @@
 
       <!-- цвет тега задается классом  -->
       <!-- purple | yellow | red | green | blue -->
-      <section class="catalog section">
+      <section class="catalog section" id="catalog">
         <div class="container">
           <div class="catalog__inner">
             <h2 class="catalog__title title">Каталог товаров</h2>
@@ -302,7 +302,7 @@
           </div>
         </div>
       </section>
-      <div class="delivery section">
+      <section class="delivery section" id="delivery">
         <div class="container">
           <div class="delivery__inner">
             <div class="delivery__info">
@@ -349,8 +349,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="calc section">
+      </section>
+      <section class="calc section" id="calc">
         <div class="container">
           <div class="calc__inner">
             <div class="calc__image">
@@ -487,9 +487,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
-    <footer class="footer section">
+    <footer class="footer section" id="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__box">

@@ -1,5 +1,17 @@
 $(function () {
-  // $('.calc__item-select').niceSelect();
+  $('[data-button="toSecton"]').on('click', function (e) {
+    e.preventDefault();
+    const sectionID = $(this).attr('href');
+
+    $('html, body').animate(
+      {
+        scrollTop: $(sectionID).offset().top - 100,
+      },
+      {
+        duration: 500,
+      },
+    );
+  });
   $('.header-mobile__burger').on('click', function () {
     $(this).toggleClass('open');
     $('.header-mobile__wrapper').toggleClass('open');
@@ -9,17 +21,25 @@ $(function () {
   });
 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      console.log(entry);
-    }
-  })
-}, {
-  threshold: 0.7
-})
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('[data-button="toSecton"]').forEach(($link) => {
+          $link.classList.toggle(
+            'active',
+            $link.getAttribute('href').replace('#', '') === entry.target.id,
+          );
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.25,
+  },
+);
 
-document.querySelectorAll('.section').forEach($s => observer.observe($s))
+document.querySelectorAll('.section').forEach(($s) => observer.observe($s));
 
 class Select {
   constructor(wrapper, settings = {}) {

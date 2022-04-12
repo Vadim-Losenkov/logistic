@@ -63,11 +63,20 @@
   .header {
     display: none;
   }
+  .top {
+    margin-top: 100px;
+  }
   .header-mobile {
     display: block;
     padding: 18px 0;
     border-bottom: 1px solid #0f1029;
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    background-color: #000104;
+    backdrop-filter: blur(100px);
     .logo {
       width: 200px;
       margin-right: 20px;
@@ -132,7 +141,7 @@
       border-radius: 18px;
       width: 277px;
 
-      position: absolute;
+      position: fixed;
       top: 120px;
       z-index: 1000;
       right: 20px;

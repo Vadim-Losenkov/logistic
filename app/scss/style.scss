@@ -62,6 +62,10 @@
       font-size: 20px;
       line-height: 23px;
       color: #ffffff;
+
+      &.active {
+        font-weight: 700;
+      }
     }
     a + a {
       margin-left: 28px;
