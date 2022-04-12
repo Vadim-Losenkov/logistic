@@ -11,7 +11,7 @@ $(function () {
 
 class Select {
   constructor(wrapper, settings = {}) {
-    this.$wrapper = document.querySelector(wrapper || '[data-select="wrapper"]');
+    this.$wrapper = document.querySelectorAll(wrapper || '[data-select="wrapper"]');
     this.settings = settings;
     this.selectors = {
       input: '[data-select="input"]',
@@ -23,7 +23,6 @@ class Select {
   }
 
   init() {
-    this.$input = this.$wrapper.querySelector(this.selectors.input);
     this.addListeners();
   }
 
@@ -39,25 +38,30 @@ class Select {
     };
 
     if (!removeListeners) {
-      this.$wrapper.addEventListener('click', listener);
+      this.$wrapper.forEach(($w) => {
+        $w.addEventListener('click', listener);
+      });
     } else {
-      this.$wrapper.removeEventListener('click', listener);
+      this.$wrapper.forEach(($w) => {
+        $w.removeEventListener('click', listener);
+      });
     }
   }
 
   openMenu() {}
   setItem($el) {
-    $el.childNodes.forEach(($i) => {
-      // this.$input.insertAdjacentElement('beforeend', $i);
-    });
+    console.log($el);
+    this.$input = $el.closest(this.selectors.wrapper).querySelector(this.selectors.input);
+    if (this.$input) {
+      this.$input.innerHTML = '';
+      this.$input.insertAdjacentHTML('beforeend', $el.outerHTML);
 
-    for (let i = 0; i < $el.children.length; i++) {
-      this.$input.insertAdjacentElement('beforeend', $el.children[i]);
+      this.$input.querySelector('[data-select="item"]').classList.add('active');
+      this.$input.querySelector('[data-select="item"]').classList.remove('disabled');
+
+      console.log($(this.$input).siblings('.calc__item-select__list').slideToggle(250));
     }
-
-    console.log(this.$input);
-    // console.log($el.children.length);
   }
 }
 
-// new Select('.calc__item-select', {});
+new Select('.calc__item-select', {});

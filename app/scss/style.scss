@@ -138,6 +138,8 @@
     flex-wrap: wrap;
   }
   &__item {
+    position: relative;
+    z-index: 10;
     width: 46%;
     background: linear-gradient(
       0.65deg,
@@ -233,6 +235,10 @@
     height: 750px;
     left: -115px;
     top: -152px;
+  }
+  &__info {
+    position: relative;
+    z-index: 10;
   }
   &__inner {
     display: flex;
@@ -378,6 +384,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 123.9%;
+    display: block;
     color: #4c4e6a;
   }
 }
