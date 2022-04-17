@@ -11,6 +11,7 @@
   "dependencies": {
     "custom-select": "^1.1.15",
     "jquery-nice-select": "^1.1.0",
+    "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1"
   }
 }

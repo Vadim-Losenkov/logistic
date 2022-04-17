@@ -1,3 +1,209 @@
 @import 'libs/reset';
-@import 'libs/custom-select.scss';
-// @import 'libs/nice-select.scss';
+@import 'libs/magnific-popup.scss';
+
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-bg {
+  background-color: rgba(0, 8, 12, 0.37);
+  backdrop-filter: blur(7px);
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  background-color: rgba(0, 8, 12, 0.37);
+  backdrop-filter: blur(7px);
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  background-color: rgba(0, 8, 12, 0.37);
+  backdrop-filter: blur(7px);
+}
+
+.user-popup {
+  .mfp-close {
+    display: none !important;
+  }
+  background-color: transparent;
+  border-radius: 21px;
+  max-width: 430px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  &__head {
+    padding: 28px 70px;
+    padding-top: 50px;
+    padding-bottom: 0;
+    position: relative;
+    background: radial-gradient(
+      107.34% 107.34% at 49.9% 6.81%,
+      #0c0f21 0%,
+      rgba(5, 7, 19, 0.38) 100%
+    );
+    backdrop-filter: blur(44px);
+    border-radius: 26px 26px 0px 0px;
+  }
+  &__head-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+    .close-popup {
+      position: absolute;
+      right: 40px;
+      top: 55px;
+      cursor: pointer;
+    }
+  }
+  &__head-toggler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+  }
+  &__head-togglerLink {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 62px;
+    padding: 0 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c4c4c466;
+    color: #fff;
+    transition: all 0.3s;
+
+    &.active {
+      color: #fff;
+      border-bottom: 2px solid #1053ff;
+    }
+    &:not(.active):hover {
+      color: #fff;
+      border-bottom: 2px solid #1053ff;
+      opacity: 0.4;
+    }
+  }
+  &__box {
+    background-color: transparent;
+    // background: radial-gradient(
+    //   107.34% 107.34% at 49.9% 6.81%,
+    //   #0c0f21 0%,
+    //   rgba(12, 15, 33, 0.38) 100%
+    // );
+    backdrop-filter: blur(44px);
+    padding: 37px;
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__info-status .input-error {
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &__info-status .input-error-icon {
+    position: absolute;
+    top: 61%;
+    right: 18px;
+  }
+  &__info-inputBox {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  &__info-hint {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 123.9%;
+    color: #ffffff;
+    margin-bottom: 13px;
+  }
+  &__info-inputWrapper {
+    position: relative;
+    svg {
+      position: absolute;
+      top: 40%;
+      left: 15px;
+      transform: translateY(-50%);
+    }
+  }
+  &__info-input {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 26px;
+    border: none;
+    // margin-bottom: 45px;
+    background: rgba(0, 0, 0, 0.31);
+    border-radius: 12px;
+    font-family: 'Gilroy';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 123.9%;
+    color: #ffffff;
+    outline: none;
+    transition: 0.3s;
+
+    &:focus {
+      transition: 0.3s;
+      // border-bottom: 2px solid #1053ff;
+    }
+    &::placeholder {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 123.9%;
+      color: #56658f;
+    }
+  }
+
+  &__link {
+    padding: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 124.4%;
+    color: #ffffff;
+
+    background: radial-gradient(95.59% 335.85% at 72.88% -14.71%, #0039cb 0%, #0066ff 100%)
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-radius: 12px;
+    width: 100%;
+  }
+}

@@ -33,8 +33,18 @@
               </div>
             </div>
             <div class="header__top-user">
-              <a href="#" class="header__top-login g-button">Вход</a>
-              <a href="#" class="header__top-signUp b-button">Регистрация</a>
+              <a
+                href="#popup-signIn"
+                data-effect="mfp-zoom-in"
+                class="header__top-login g-button open-popup"
+                >Вход</a
+              >
+              <a
+                href="#popup-signUp"
+                data-effect="mfp-zoom-in"
+                class="header__top-signUp b-button open-popup"
+                >Регистрация</a
+              >
             </div>
           </div>
         </div>
@@ -130,174 +140,100 @@
           </div>
         </div>
       </section>
-
       <!-- цвет тега задается классом  -->
       <!-- purple | yellow | red | green | blue -->
       <section class="catalog section" id="catalog">
         <div class="container">
           <div class="catalog__inner">
             <h2 class="catalog__title title">Каталог товаров</h2>
-            <div class="catalog__box">
-              <div class="catalog__item">
-                <div class="catalog__item-image">
-                  <img src="images/content/item-1.jpg" alt="" />
-                </div>
-                <div class="catalog__item-box">
-                  <div class="catalog__item-tags">
-                    <a href="#" class="catalog__item-tag purple tag">
-                      <span>
-                        <img src="images/icons/apple.svg" alt="" />
-                        Apple
-                      </span>
-                    </a>
-                    <a href="#" class="catalog__item-tag blue tag">
-                      <span>Видеокарты</span>
-                    </a>
-                  </div>
-                  <h4 class="catalog__item-title s-title">Техника</h4>
-                  <p class="catalog__item-text">
-                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
-                    сердце от бега.
-                  </p>
-                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
-                </div>
+          </div>
+        </div>
+        <div class="catalog__box">
+          <div class="catalog__item" style="background-image: url('images/content/item-1-bg.png')">
+            <div class="catalog__item-box">
+              <div class="catalog__item-tags">
+                <a href="#" class="catalog__item-tag purple tag">
+                  <span>
+                    <img src="images/icons/apple.svg" alt="" />
+                    Apple
+                  </span>
+                </a>
+                <a href="#" class="catalog__item-tag blue tag">
+                  <span>Видеокарты</span>
+                </a>
               </div>
-              <div class="catalog__item">
-                <div class="catalog__item-image">
-                  <img src="images/content/item-2.png" alt="" />
-                </div>
-                <div class="catalog__item-box">
-                  <div class="catalog__item-tags">
-                    <a href="#" class="catalog__item-tag yellow tag">
-                      <span>
-                        <img src="images/icons/nike.png" alt="" />
-                        Nike
-                      </span>
-                    </a>
-                    <a href="#" class="catalog__item-tag red tag">
-                      <span>
-                        <img src="images/icons/adidas.svg" alt="" />
-                        Adidas
-                      </span>
-                    </a>
-                  </div>
-                  <h4 class="catalog__item-title s-title">Одежда</h4>
-                  <p class="catalog__item-text">
-                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
-                    сердце от бега.
-                  </p>
-                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
-                </div>
+              <h4 class="catalog__item-title s-title">Техника</h4>
+              <p class="catalog__item-text">
+                Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
+                сердце от бега.
+              </p>
+              <a href="#" class="catalog__item-link g-button">Подробнее</a>
+            </div>
+          </div>
+          <div
+            class="catalog__item left"
+            style="background-image: url('images/content/item-2-bg.png')"
+          >
+            <div class="catalog__item-box">
+              <div class="catalog__item-tags">
+                <a href="#" class="catalog__item-tag yellow tag">
+                  <span> Nike </span>
+                </a>
+                <a href="#" class="catalog__item-tag red tag">
+                  <span>Adidas</span>
+                </a>
               </div>
-              <div class="catalog__item">
-                <div class="catalog__item-image">
-                  <img src="images/content/item-1.jpg" alt="" />
-                </div>
-                <div class="catalog__item-box">
-                  <div class="catalog__item-tags">
-                    <a href="#" class="catalog__item-tag purple tag">
-                      <span>
-                        <img src="images/icons/apple.svg" alt="" />
-                        Apple
-                      </span>
-                    </a>
-                    <a href="#" class="catalog__item-tag blue tag">
-                      <span>Видеокарты</span>
-                    </a>
-                  </div>
-                  <h4 class="catalog__item-title s-title">Техника</h4>
-                  <p class="catalog__item-text">
-                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
-                    сердце от бега.
-                  </p>
-                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
-                </div>
+              <h4 class="catalog__item-title s-title">Одежда</h4>
+              <p class="catalog__item-text">
+                Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
+                сердце от бега.
+              </p>
+              <a href="#" class="catalog__item-link g-button">Подробнее</a>
+            </div>
+          </div>
+          <div class="catalog__item" style="background-image: url('images/content/item-3-bg.png')">
+            <div class="catalog__item-box">
+              <div class="catalog__item-tags">
+                <a href="#" class="catalog__item-tag green tag">
+                  <span>
+                    <img src="images/icons/apple.svg" alt="" />
+                    Apple
+                  </span>
+                </a>
+                <a href="#" class="catalog__item-tag purple tag">
+                  <span>Видеокарты</span>
+                </a>
               </div>
-              <div class="catalog__item">
-                <div class="catalog__item-image">
-                  <img src="images/content/item-2.png" alt="" />
-                </div>
-                <div class="catalog__item-box">
-                  <div class="catalog__item-tags">
-                    <a href="#" class="catalog__item-tag yellow tag">
-                      <span>
-                        <img src="images/icons/nike.png" alt="" />
-                        Nike
-                      </span>
-                    </a>
-                    <a href="#" class="catalog__item-tag red tag">
-                      <span>
-                        <img src="images/icons/adidas.svg" alt="" />
-                        Adidas
-                      </span>
-                    </a>
-                  </div>
-                  <h4 class="catalog__item-title s-title">Одежда</h4>
-                  <p class="catalog__item-text">
-                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
-                    сердце от бега.
-                  </p>
-                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
-                </div>
+              <h4 class="catalog__item-title s-title">Косметика</h4>
+              <p class="catalog__item-text">
+                Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
+                сердце от бега.
+              </p>
+              <a href="#" class="catalog__item-link g-button">Подробнее</a>
+            </div>
+          </div>
+          <div
+            class="catalog__item left"
+            style="background-image: url('images/content/item-4-bg.png')"
+          >
+            <div class="catalog__item-box">
+              <div class="catalog__item-tags">
+                <a href="#" class="catalog__item-tag blue tag">
+                  <span>
+                    <img src="images/icons/apple.svg" alt="" />
+                    Apple
+                  </span>
+                </a>
+                <a href="#" class="catalog__item-tag yellow tag">
+                  <span>Видеокарты</span>
+                </a>
               </div>
-              <!-- <div class="catalog__item">
-                <div class="catalog__item-image">
-                  <img src="images/content/item-3.png" alt="" />
-                </div>
-                <div class="catalog__item-box">
-                  <div class="catalog__item-tags" style="margin-top: -65px">
-                    <a href="#" class="catalog__item-tag green tag">
-                      <span>
-                        <img src="images/icons/mac.png" style="margin: 0" alt="" />
-                      </span>
-                    </a>
-                    <a href="#" class="catalog__item-tag purple tag" style="padding: 8px 19px">
-                      <span>
-                        <img src="images/icons/dior.png" style="margin: 0" alt="" />
-                      </span>
-                    </a>
-                  </div>
-                  <h4 class="catalog__item-title s-title">Косметика</h4>
-                  <p class="catalog__item-text">
-                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
-                    сердце от бега.
-                  </p>
-                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
-                </div>
-              </div>
-              <div class="catalog__item">
-                <div class="catalog__item-image">
-                  <img src="images/content/item-4.png" alt="" />
-                </div>
-                <div class="catalog__item-box">
-                  <div class="catalog__item-tags" style="margin-top: -85px">
-                    <a
-                      href="#"
-                      class="catalog__item-tag blue tag"
-                      style="padding: 8px 19px; transform: translateY(-7px)"
-                    >
-                      <span>
-                        <img src="images/icons/ck.png" style="margin: 0" alt="" />
-                      </span>
-                    </a>
-                    <a href="#" class="catalog__item-tag yellow tag" style="padding: 3px 19px">
-                      <span>
-                        <img
-                          src="images/icons/gucci.png"
-                          style="margin: 0; margin-bottom: -5px"
-                          alt=""
-                        />
-                      </span>
-                    </a>
-                  </div>
-                  <h4 class="catalog__item-title s-title">Парфюмерия</h4>
-                  <p class="catalog__item-text">
-                    Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
-                    сердце от бега.
-                  </p>
-                  <a href="#" class="catalog__item-link g-button">Подробнее</a>
-                </div>
-              </div> -->
+              <h4 class="catalog__item-title s-title">Парфюмерия</h4>
+              <p class="catalog__item-text">
+                Она положила руку на живот, прислушалась: мальчик двигался там, трепыхался, как
+                сердце от бега.
+              </p>
+              <a href="#" class="catalog__item-link g-button">Подробнее</a>
             </div>
           </div>
         </div>
@@ -502,8 +438,145 @@
       </div>
     </footer>
 
+    <div class="popups">
+      <div id="popup-signUp" class="user-popup mfp-with-anim mfp-hide">
+        <div class="user-popup__head">
+          <div class="user-popup__head-logo">
+            <img src="images/global/logo.png" alt="logo" />
+          </div>
+          <div class="user-popup__head-toggler">
+            <a
+              href="#popup-signIn"
+              data-effect="mfp-zoom-in"
+              class="user-popup__head-togglerLink open-popup"
+              >Авторизация</a
+            >
+            <a
+              href="#popup-signUp"
+              data-effect="mfp-zoom-in"
+              class="user-popup__head-togglerLink open-popup active"
+              >Регистрация</a
+            >
+          </div>
+        </div>
+        <form action="" class="user-popup__box" autocomplete="off" data-popup="form-up">
+          <div class="user-popup__info-inputBox">
+            <div class="user-popup__info-inputWrapper">
+              <div class="user-popup__info-hint">Ваше имя</div>
+              <input
+                type="name"
+                id="name"
+                name="name"
+                placeholder="Введите свое имя"
+                class="user-popup__info-input"
+              />
+            </div>
+            <div class="user-popup__info-status status"></div>
+          </div>
+          <div class="user-popup__info-inputBox">
+            <div class="user-popup__info-inputWrapper">
+              <div class="user-popup__info-hint">Ваша фамилия</div>
+              <input
+                type="sname"
+                id="sname"
+                name="sname"
+                placeholder="Введите свою фамилию"
+                class="user-popup__info-input"
+              />
+            </div>
+            <div class="user-popup__info-status status"></div>
+          </div>
+          <div class="user-popup__info-inputBox">
+            <div class="user-popup__info-inputWrapper">
+              <div class="user-popup__info-hint">Ваша почта</div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Введите свою почту"
+                class="user-popup__info-input"
+              />
+            </div>
+            <div class="user-popup__info-status status"></div>
+          </div>
+          <div class="user-popup__info-inputBox">
+            <div class="user-popup__info-inputWrapper">
+              <div class="user-popup__info-hint">Ваш пароль</div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Придумайте пароль"
+                class="user-popup__info-input"
+              />
+            </div>
+            <div class="user-popup__info-status status"></div>
+          </div>
+          <div class="user-popup__links">
+            <button type="submit" data-popup="submit" class="user-popup__link">
+              Зарегестрироваться
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="popup-signIn" class="user-popup mfp-with-anim mfp-hide">
+        <div class="user-popup__head">
+          <div class="user-popup__head-logo">
+            <img src="images/global/logo.png" alt="logo" />
+          </div>
+          <div class="user-popup__head-toggler">
+            <a
+              href="#popup-signIn"
+              data-effect="mfp-zoom-in"
+              class="user-popup__head-togglerLink open-popup active"
+              >Авторизация</a
+            >
+            <a
+              href="#popup-signUp"
+              data-effect="mfp-zoom-in"
+              class="user-popup__head-togglerLink open-popup"
+              >Регистрация</a
+            >
+          </div>
+        </div>
+        <form action="" class="user-popup__box" autocomplete="off" data-popup="form-in">
+          <div class="user-popup__info-inputBox">
+            <div class="user-popup__info-inputWrapper">
+              <div class="user-popup__info-hint">E-mail</div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Введите свой E-mail"
+                class="user-popup__info-input"
+              />
+            </div>
+            <div class="user-popup__info-status status"></div>
+          </div>
+          <div class="user-popup__info-inputBox">
+            <div class="user-popup__info-inputWrapper">
+              <div class="user-popup__info-hint">Пароль</div>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Введите свой пароль"
+                class="user-popup__info-input"
+              />
+            </div>
+            <div class="user-popup__info-status status"></div>
+          </div>
+          <div class="user-popup__links">
+            <!--Кнопка не работает, т.к я ее в js отключил-->
+            <button type="submit" data-popup="submit" class="user-popup__link">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script src="js/jquery.min.js"></script>
-    <script src="js/custom-select.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
